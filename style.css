@@ -1,0 +1,161 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 10px;
+    /* border: 1px gray dashed; */
+    height: 70px;
+}
+
+section {
+    /* border: 1px red dashed; */
+    height: 500px;
+    position: relative;
+}
+
+.logo {
+    float: left;
+}
+
+.menu-button {
+    float: right;
+}
+
+.welcome {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+.button {
+    position: absolute;
+    display: block;
+    top: 60%;
+    left: 40%;
+    width: 200px;
+    border-width: 5px;
+    border-color: brown;
+    border-radius: 50px;
+    color:peru;
+    background-color: yellow;
+    font-size: 30px;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+table {
+    width: 100%;
+    /* border: 1px black dashed; */
+    background-color:burlywood;
+}
+
+footer {
+    padding: 10px 50px 10px 50px;
+    width: 100%;
+    background-color: grey;
+    height: 40px;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: hotpink;
+    opacity: 0.5;
+    visibility: hidden;
+}
+
+.sideMenu {
+    position: absolute;
+    top: 0;
+    right: 0%;
+    transform: translateX(100%);
+    background-color: white;
+    /* border: 2px red dashed; */
+    width: 30%;
+    height: 100%;
+    padding: 10px;
+    transition-property: transform;
+    transition-duration: 1s;
+    visibility: hidden;
+    
+}
+
+body {
+    overflow: hidden;
+}
+
+.sideMenuActive {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+li {
+    margin: 10px;
+    list-style-type: none;
+    font-size: 30px;
+}
+
+a, li {
+    text-decoration: none;
+}
+
+#exitButton {
+    margin-left: 90% ;
+    font-size: 40px;
+    width: fit-content;
+}
+
+.logOut {
+    font-size: 20px;
+}
+
+.modal {
+    position:absolute;
+    width: 500px;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    left: 20%;
+    top: 30%;
+    padding: 20px;
+    visibility: hidden;
+}
+
+#exitButtonModal {
+    margin-left: 95% ;
+    font-size: 30px;
+    color: gray;
+}
+
+@media screen and (max-width: 600px) {
+    .welcome h1 {
+        font-size: 20px;
+    }
+
+    table p {
+        font-size: 8px;
+        color: red;
+    }
+
+    .button {
+        left: 20%;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color:darkblue;
+        color: lightgreen;
+    }
+
+    .welcome h1 {
+        color: red;
+    }
+}
